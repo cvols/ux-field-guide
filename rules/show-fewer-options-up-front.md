@@ -4,7 +4,7 @@ summary: When people must pick one of many options, lead with a short, curated s
 category: choice
 principle: Choice overload
 confidence: disputed
-sources: [ig-Del7XTgsuwI]
+sources: [ig-Del7XTgsuwI, yt-Qsq-Sj_rojU]
 ---
 
 **Do:** Lead with a few recommended or popular options, and offer filters or
@@ -23,3 +23,8 @@ and Todd (2010) pooled 50 experiments and found a mean effect near zero, with
 large variation between studies. Choice overload seems to appear only under
 some conditions, such as complex choices or no dominant option. Treat this as
 a trade-off to test, not a law.
+
+yt-Qsq-Sj_rojU (5:23) shows Grammarly highlighting the plan that matches
+each person's onboarding answers, and says it lifted upgrades by almost 20%.
+The sources say "10%+" or "10–20%", from Grammarly's own test, with no
+sample size (https://growth.design/case-studies/grammarly-onboarding-survey).

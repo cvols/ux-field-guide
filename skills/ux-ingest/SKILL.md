@@ -30,9 +30,15 @@ Scripts below are relative to this skill's directory.
    anything that is not a rule a designer or engineer could apply, such as
    engagement bait or a story with no lesson. For each claim, note what to
    do, what to avoid, why, the timestamp, and any number or study it cites.
-5. **Check.** When a claim cites a study or a named law, search for it.
-   Videos often repeat findings that failed to replicate. Treat a number
-   that comes from the video's own mockup as an illustration, not data.
+5. **Check.** Take nothing in the video as fact. When a claim cites a study,
+   an A/B test, or a named law, open the source. Videos often repeat
+   findings that failed to replicate, quote vendor case studies with no
+   sample size, and misquote their own sources. Treat a number from the
+   video's own mockup as an illustration, not data. A citation you or a
+   subagent recall from memory is not checked: open it, or leave it out of
+   the rule. When a video's technique manipulates people, such as fake
+   progress or a guilt-trip decline button, write the honest version as the
+   rule and say in the source note that the example was reversed.
 6. **Match.** Read `INDEX.md`, then each rule that might cover the same
    ground. For each claim, choose one:
    - **New**: no existing rule covers it. Create `rules/<slug>.md`.
@@ -52,6 +58,13 @@ Scripts below are relative to this skill's directory.
    `gh pr create`. The body is a table of rules with the action (new,
    reinforced, conflict), confidence, and one line on why. List skipped
    claims and why under it. End with the user's PR attribution line.
+
+## Several videos at once
+
+Fetch them all, then extract and check each video separately. Read-only
+subagents can do this in parallel. Then do steps 6 to 9 one video at a time
+on a single branch, `ingest/<id>+<id>`, with one commit per video. That way
+each video's rules are matched against the rules the previous video added.
 
 ## Rule file
 
