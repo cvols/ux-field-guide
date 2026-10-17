@@ -22,10 +22,13 @@ gives them no reason to keep going.
 
 **Spot it:**
 
-- In code: an auth guard at the root layout that sends signed-out people
-  straight to sign-in at launch, such as `if (!session) return <Redirect
-  href="/login" />` around every route; results blurred or locked behind
-  sign-up; a sign-up button labeled only "Continue".
+- In code: an auth guard at the root layout that wraps every screen, such as
+  expo-router `<Stack.Protected guard={!!session}>` around the tabs, or
+  `if (!session) return <Redirect href="/login" />` in the root layout. Also
+  launch logic that calls `supabase.auth.getSession` or `useSession` and
+  routes signed-out people to sign-in; results blurred or locked behind
+  sign-up; a sign-up button labeled only "Continue". An index redirect to
+  the home tab is not a wall.
 - On screen: the first launch shows a login wall before any product
   content.
 

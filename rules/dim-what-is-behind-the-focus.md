@@ -19,11 +19,15 @@ behind. Lowering the ground's contrast leaves one thing to look at.
 **Spot it:**
 
 - In code: a React Native `<Modal transparent>` whose root view has no
-  semi-transparent background, a bottom sheet with no backdrop component, a
-  web `<dialog>` with no `::backdrop` style, or a custom overlay with
-  `position: fixed` and no scrim layer.
-- On screen: with a dialog or sheet open, the page behind it is at full
-  contrast.
+  semi-transparent background; an expo-router screen with `presentation:
+  "transparentModal"` and no backdrop of its own; `@gorhom/bottom-sheet` with
+  no `backdropComponent`; a custom panel that expands over content with
+  absolute positioning and no scrim; a web `<dialog>` with no `::backdrop`
+  style; a custom overlay with `position: fixed` and no scrim layer. Native
+  presentations dim on their own and pass: expo-router `modal`,
+  `formSheet`, and `pageSheet`, native context menus, and `Link.Preview`.
+- On screen: with a dialog, sheet, or expanded panel open, the page behind
+  it is at full contrast.
 
 **Notes:** ig-Del7XTgsuwI (0:16) dims the page from 17.4:1 to 2.5:1 contrast.
 Those numbers come from the video's mockup, not a guideline.

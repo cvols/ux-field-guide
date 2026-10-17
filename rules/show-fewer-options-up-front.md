@@ -18,9 +18,11 @@ people put it off.
 
 **Spot it:**
 
-- In code: a list or grid of options to choose from (plans, products,
-  categories) that renders more than about eight at once, with no
-  recommended or popular marker, filter, or "show more".
+- In code: a decision point where one item must be picked (plans, products,
+  a category to start with) that renders more than about eight options at
+  once, with no recommended or popular marker, filter, or "show more".
+  Lists of content to browse, such as a feed or a schedule, are not decision
+  points.
 - On screen: a large, uniform grid of choices at a decision point.
 
 **Notes:** ig-Del7XTgsuwI (1:17) cites the jam study (Iyengar and Lepper,

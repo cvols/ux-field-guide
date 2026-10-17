@@ -22,12 +22,19 @@ recover from.
 
 **Spot it:**
 
-- In code: permission requests (`requestPermissionsAsync`,
-  `requestForegroundPermissionsAsync`, `Notifications.requestPermissionsAsync`,
-  `Notification.requestPermission`, `getUserMedia`, `navigator.geolocation`)
-  called at app start, from a root layout, `App.tsx`, or a `useEffect` on the
-  first screen, instead of in the handler of the feature that needs them; no
-  fallback path when the permission is denied.
+- In code: permission requests called at app start, from a root layout,
+  `App.tsx`, or a `useEffect` on the first screen, instead of in the handler
+  of the feature that needs them. Covers `request*PermissionsAsync`
+  (notifications, location, camera, contacts, media),
+  `getExpoPushTokenAsync` and `registerForPushNotificationsAsync` helpers,
+  which ask without saying so, `requestTrackingPermissionsAsync` (App
+  Tracking Transparency), SDKs that ask on init (Firebase Messaging
+  `requestPermission`, OneSignal), and on the web
+  `Notification.requestPermission`, `getUserMedia`, and
+  `navigator.geolocation`. Config is a lead, not a break: expo-notifications
+  or expo-location plugins and `NS*UsageDescription` keys in `infoPlist`
+  show what will be asked. Also look for no fallback when permission is
+  denied.
 - On screen: a system permission alert appears on first launch, before the
   person has done anything.
 
