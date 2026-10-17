@@ -17,6 +17,15 @@ or in a sidebar. That is where ads live, and people's eyes jump past it.
 **Why:** People learn to ignore anything that looks like an ad: bright
 boxes, banners, and content at the edges of the page.
 
+**Spot it:**
+
+- In code: account or safety messages (payment failed, card expiring, verify
+  email, data loss) rendered only as a full-width banner above the main
+  content or in a sidebar, with a saturated background such as `bg-yellow-*`,
+  `bg-red-*`, or a `Banner` or promo-carousel component.
+- On screen: an important message sits in a bright boxed strip at the top or
+  edge, away from the content it concerns.
+
 **Notes:** Banner blindness was first reported by Benway and Lane in 1998,
 and Nielsen Norman Group eye-tracking studies keep confirming it. Those
 studies also found text ads read more often than display ads, which fits the

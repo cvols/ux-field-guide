@@ -20,6 +20,17 @@ feature does not need.
 a visible reason is more likely to be allowed, and a refused one is hard to
 recover from.
 
+**Spot it:**
+
+- In code: permission requests (`requestPermissionsAsync`,
+  `requestForegroundPermissionsAsync`, `Notifications.requestPermissionsAsync`,
+  `Notification.requestPermission`, `getUserMedia`, `navigator.geolocation`)
+  called at app start, from a root layout, `App.tsx`, or a `useEffect` on the
+  first screen, instead of in the handler of the feature that needs them; no
+  fallback path when the permission is denied.
+- On screen: a system permission alert appears on first launch, before the
+  person has done anything.
+
 **Notes:** Apple's App Review Guideline 5.1.1(iv) bars apps from
 manipulating, tricking, or forcing people to consent to unnecessary data
 access, and asks for alternatives when people decline

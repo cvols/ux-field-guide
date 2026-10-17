@@ -17,5 +17,12 @@ as separate things with no order.
 **Why:** Elements joined by a line read as one group, and the line shows the
 order to read them in, from start to end.
 
+**Spot it:**
+
+- In code: a multi-step flow (`step`, `currentStep`, wizard, onboarding pager)
+  whose step indicator renders separate dots or circles with no connecting
+  line, or has no indicator at all.
+- On screen: step markers float apart with no line showing their order.
+
 **Notes:** ig-Del7XTgsuwI (1:01) shows four loose circles read as 4 groups
 and connected circles as 1 group.

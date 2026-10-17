@@ -19,6 +19,16 @@ review them.
 default saves effort, and a bad one decides for people without their
 noticing.
 
+**Spot it:**
+
+- In code: pickers, selects, or segmented controls initialized to empty or
+  `null` where one value is far more common, such as quantity, date, or
+  country. Also the opposite case: checkboxes for paid extras, marketing
+  consent, or data sharing initialized to true (`useState(true)`,
+  `defaultChecked`).
+- On screen: blank choices that most people answer the same way, or
+  pre-ticked consent or paid extras.
+
 **Notes:** A meta-analysis by Jachimowicz et al. (2019) pooled 58 studies
 with about 73,000 participants and found a medium default effect (d = 0.68),
 with large variation between studies

@@ -18,6 +18,15 @@ and tours that each push a different action.
 **Why:** Instructions given before people need them are forgotten, and a
 tutorial can make a simple app look hard.
 
+**Spot it:**
+
+- In code: tutorial slides shown before first use (`Onboarding`,
+  `Walkthrough`, or `Intro` screens with a swipeable pager, often gated by a
+  flag like `hasSeenOnboarding`); empty states that only say "No items"; several
+  tooltips, coach marks, or modals triggered on the same screen mount.
+- On screen: the first launch explains features in slides, or an empty list
+  shows bare text with no example or next action.
+
 **Notes:** Nielsen Norman Group tested deck-of-cards tutorials with 70 people
 on 4 iOS apps. People who read the tutorial were no more successful (91% vs
 94%, not significant) and rated the tasks harder (4.92 vs 5.49 on a 7-point

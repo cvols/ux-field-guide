@@ -17,6 +17,14 @@ already have.
 **Why:** Every keystroke is effort and a chance for a typo. A form that
 takes less input gets finished faster and more often.
 
+**Spot it:**
+
+- In code: address fields (`street`, `city`, `postcode`) with no lookup or
+  autocomplete; inputs missing `autoComplete` or `textContentType` (React
+  Native) or `autocomplete` (web); name or email fields not prefilled from the
+  signed-in user; country or currency not derived from the locale.
+- On screen: a form asks for something the app already shows elsewhere.
+
 **Notes:** ig-Del7XTgsuwI (0:49) cuts a full address from 30 keystrokes to 7
 with postcode lookup. The video frames this as Parkinson's law, that a task
 swells to fill the time it is given, but the rule holds on effort alone. See also

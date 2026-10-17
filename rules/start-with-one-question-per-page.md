@@ -16,6 +16,12 @@ when testing shows people move through them easily.
 **Why:** One thing per screen helps people understand what you are asking,
 focus on the answer, recover from errors, and use the form on a phone.
 
+**Spot it:**
+
+- In code: a sign-up, checkout, or setup form on mobile with more than about
+  six inputs on one screen.
+- On screen: a mobile form needs scrolling to reach its submit button.
+
 **Notes:** GOV.UK's service manual recommends starting this way and merging
 pages when user research supports it
 (https://www.gov.uk/service-manual/design/form-structure).

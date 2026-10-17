@@ -18,6 +18,15 @@ files". That pattern is called confirmshaming.
 **Why:** Concrete consequences help people decide. Threats and shaming wear
 down trust and win little in return.
 
+**Spot it:**
+
+- In code: decline labels in upsell, permission, or retention dialogs such as
+  "No thanks, I", "I'll risk", "I don't want", or "I prefer"; countdown
+  timers on offers; copy that threatens deletion or loss without saying what
+  happens and when.
+- On screen: a guilt-laden decline button, or urgency with no stated
+  reason.
+
 **Notes:** deceptive.design catalogues confirmshaming as a deceptive pattern
 that uses guilt or shame to push people into something they would not
 otherwise do (https://www.deceptive.design/types/confirmshaming).

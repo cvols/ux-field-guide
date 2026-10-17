@@ -89,6 +89,13 @@ as the complete set, and people do not swipe.
 **Why:** People complete shapes that are cut off, so a clipped card reads as
 part of a row that keeps going.
 
+**Spot it:**
+
+- In code: a horizontal list or carousel whose item width equals the screen
+  or container width, or divides it evenly.
+- On screen: the last visible card in a horizontal row ends exactly at the
+  screen edge.
+
 **Notes:** ig-Del7XTgsuwI (0:02) shows 0% vs 32% of the next card visible.
 ```
 
@@ -103,6 +110,11 @@ part of a row that keeps going.
   - `single-source`: one video's say-so.
   - `disputed`: sources or research disagree. Notes says how.
 - `sources`: source ids. Each needs a file in `sources/`.
+- `Spot it` tells `ux-audit` how to find a break of the rule. "In code"
+  names searchable signals: component names, props, APIs, and style values,
+  across React Native and web. "On screen" says what the break looks like
+  in a screenshot. Write signals precise enough to search for, and say so
+  when a rule can only be judged on screen.
 - `Notes` is optional. Use it for evidence, caveats, and conflicts, each
   attributed to a source id and timestamp.
 

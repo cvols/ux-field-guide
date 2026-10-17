@@ -16,6 +16,13 @@ compare, none is clearly best, or people do not know what they want.
 **Why:** A long list of similar options makes the decision harder, and some
 people put it off.
 
+**Spot it:**
+
+- In code: a list or grid of options to choose from (plans, products,
+  categories) that renders more than about eight at once, with no
+  recommended or popular marker, filter, or "show more".
+- On screen: a large, uniform grid of choices at a decision point.
+
 **Notes:** ig-Del7XTgsuwI (1:17) cites the jam study (Iyengar and Lepper,
 2000): 24 jams sold to 3% of shoppers who stopped, and 6 jams to 30%. That
 finding has replicated poorly. A meta-analysis by Scheibehenne, Greifeneder,
