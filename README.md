@@ -28,9 +28,9 @@ Setup on macOS:
 
 ```sh
 brew install yt-dlp ffmpeg whisper-cpp
-gh repo clone cvols/ux-field-guide ~/Documents/GitHub/ux-field-guide
+gh repo clone cvols/ux-field-guide ~/Desktop/projects/personal/ux-field-guide
 for s in ux-ingest ux-review; do
-  ln -s ~/Documents/GitHub/ux-field-guide/skills/$s ~/.agents/skills/$s
+  ln -s ~/Desktop/projects/personal/ux-field-guide/skills/$s ~/.agents/skills/$s
 done
 ~/.agents/bin/pstack-sync   # mirrors ~/.agents/skills into ~/.claude/skills
 ```
