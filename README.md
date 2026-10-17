@@ -18,18 +18,23 @@ sources, with provenance and a confidence level on each.
 
 ## Agent skills
 
-Two skills in [`skills/`](skills) work with Claude Code, Codex, and Cursor:
+Three skills in [`skills/`](skills) work with Claude Code, Codex, and Cursor:
 
 - **`ux-ingest <url>`** downloads a video, transcribes it, reads its frames,
   turns its claims into new or updated rules, and opens a PR.
-- **`ux-review`** applies the rules while building or reviewing a UI.
+- **`ux-review`** applies the rules while building a UI or reviewing a
+  change.
+- **`ux-audit [path]`** checks an existing app against every rule, in code
+  and on screen, and writes a report without changing the app. Each rule's
+  **Spot it** section tells it what to search for and what a break looks
+  like.
 
 Setup on macOS:
 
 ```sh
 brew install yt-dlp ffmpeg whisper-cpp
 gh repo clone cvols/ux-field-guide ~/Desktop/projects/personal/ux-field-guide
-for s in ux-ingest ux-review; do
+for s in ux-ingest ux-review ux-audit; do
   ln -s ~/Desktop/projects/personal/ux-field-guide/skills/$s ~/.agents/skills/$s
 done
 ~/.agents/bin/pstack-sync   # mirrors ~/.agents/skills into ~/.claude/skills

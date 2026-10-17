@@ -9,7 +9,9 @@ sources: [yt-Qsq-Sj_rojU]
 
 **Do:** Explain a step at the step, in a line or two that says why it
 matters. Give empty states example content and a nudge toward the first
-action. If you need a checklist, use one that stays available and can be
+action. When a view is empty because there is no data, such as a date with
+no games, offer the next useful step, such as jumping to the next date that
+has content. If you need a checklist, use one that stays available and can be
 dismissed.
 
 **Don't:** Open with a deck of tutorial cards. Don't stack pop-ups, banners,
@@ -17,6 +19,16 @@ and tours that each push a different action.
 
 **Why:** Instructions given before people need them are forgotten, and a
 tutorial can make a simple app look hard.
+
+**Spot it:**
+
+- In code: tutorial slides shown before first use (`Onboarding`,
+  `Walkthrough`, or `Intro` screens with a swipeable pager, often gated by a
+  flag like `hasSeenOnboarding`); empty states that only say "No items" or
+  "Nothing found"; several tooltips, coach marks, or modals triggered on the
+  same screen mount.
+- On screen: the first launch explains features in slides, or an empty view
+  shows bare text with no example or next action.
 
 **Notes:** Nielsen Norman Group tested deck-of-cards tutorials with 70 people
 on 4 iOS apps. People who read the tutorial were no more successful (91% vs

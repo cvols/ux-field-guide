@@ -20,6 +20,18 @@ make an account the only way to keep it.
 **Why:** People commit once they have felt the value. A wall before that
 gives them no reason to keep going.
 
+**Spot it:**
+
+- In code: an auth guard at the root layout that wraps every screen, such as
+  expo-router `<Stack.Protected guard={!!session}>` around the tabs, or
+  `if (!session) return <Redirect href="/login" />` in the root layout. Also
+  launch logic that calls `supabase.auth.getSession` or `useSession` and
+  routes signed-out people to sign-in; results blurred or locked behind
+  sign-up; a sign-up button labeled only "Continue". An index redirect to
+  the home tab is not a wall.
+- On screen: the first launch shows a login wall before any product
+  content.
+
 **Notes:** Nielsen Norman Group reports that users were rarely more annoyed
 than when a login wall blocked them, and advises a wall only when signing in
 clearly benefits the user (https://www.nngroup.com/articles/login-walls/).

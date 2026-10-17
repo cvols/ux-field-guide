@@ -15,6 +15,14 @@ requirement off as people type.
 
 **Why:** Hidden rules turn into failed submits and retyping.
 
+**Spot it:**
+
+- In code: password or constrained inputs (`secureTextEntry`,
+  `type="password"`, a regex check, `minLength`, `pattern`) whose
+  requirements appear only in validation error messages, not in helper text
+  rendered before submit.
+- On screen: requirements appear only after a failed submit.
+
 **Notes:** WCAG 2.2 success criterion 3.3.2 (Labels or Instructions)
 requires instructions when input must follow a format. Its examples are a
 date field with the expected format, and a username field with strict

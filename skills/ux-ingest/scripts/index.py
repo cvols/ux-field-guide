@@ -11,6 +11,7 @@ CATEGORIES = [
 ]
 CONFIDENCE = ["established", "single-source", "disputed"]
 REQUIRED = ["title", "summary", "category", "principle", "confidence", "sources"]
+SECTIONS = ["**Do:**", "**Don't:**", "**Why:**", "**Spot it:**", "- In code:", "- On screen:"]
 
 
 def frontmatter(path):
@@ -42,6 +43,10 @@ def main():
         if missing:
             errors.append(f"{name}: missing {', '.join(missing)}")
             continue
+        body = path.read_text()
+        absent = [s for s in SECTIONS if s not in body]
+        if absent:
+            errors.append(f"{name}: missing {', '.join(absent)}")
         if fields["category"] not in CATEGORIES:
             errors.append(f"{name}: category must be one of {', '.join(CATEGORIES)}")
         if fields["confidence"] not in CONFIDENCE:

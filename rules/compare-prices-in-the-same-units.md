@@ -18,6 +18,12 @@ before people choose them.
 **Why:** People judge a price against whatever they saw just before it.
 That makes the comparison powerful, and easy to misuse.
 
+**Spot it:**
+
+- In code: price displays that mix `/mo` and one-off totals in one view;
+  "just X%" or "less than a coffee" copy; add-ons put in the cart by default.
+- On screen: a recurring price set against a one-time price.
+
 **Notes:** Anchoring held up in the Many Labs 1 replication (Klein et al.,
 2014), but decoy effects are fragile with realistic displays (Frederick, Lee,
 and Baskin, 2014)

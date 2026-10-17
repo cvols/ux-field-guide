@@ -17,6 +17,14 @@ flow is.
 **Why:** Seeing real progress can help people persist. A bar that lies
 breaks trust once people notice.
 
+**Spot it:**
+
+- In code: a progress bar with a hard-coded starting value
+  (`useState(0.2)`), progress advanced by a timer or `setInterval` rather than
+  by completed steps, or steps counted that the person never performs.
+- On screen: progress that moves on its own, or starts partway with no
+  finished step shown.
+
 **Notes:** Nunes and Drèze (2006) gave car-wash customers loyalty cards
 needing 8 stamps. Of those whose card had 10 spaces with 2 already stamped,
 34% finished, against 19% of those with a blank card of 8. They found the

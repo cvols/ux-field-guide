@@ -19,6 +19,19 @@ review them.
 default saves effort, and a bad one decides for people without their
 noticing.
 
+**Spot it:**
+
+- In code: pickers, selects, or segmented controls initialized to empty or
+  `null` where one value is far more common, such as quantity, date, or
+  country. Also the opposite case: paid extras, marketing consent, data
+  sharing, or notification opt-ins shown as on before the person chooses.
+  Look for `defaultChecked`, `Switch value={true}`, `Link.MenuAction isOn`,
+  or menu items marked checked, and for an "on" state that no real
+  subscription or setting backs. `useState(true)` is only a lead; most of
+  those are UI state, not choices.
+- On screen: blank choices that most people answer the same way, or
+  pre-ticked consent, opt-ins, or paid extras.
+
 **Notes:** A meta-analysis by Jachimowicz et al. (2019) pooled 58 studies
 with about 73,000 participants and found a medium default effect (d = 0.68),
 with large variation between studies

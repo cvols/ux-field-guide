@@ -16,5 +16,18 @@ that ends cleanly reads as the complete set, so people do not swipe.
 **Why:** People complete shapes that are cut off, so a clipped card reads as
 part of a row that keeps going.
 
+**Spot it:**
+
+- In code: a horizontal card carousel (`horizontal`, `snapToInterval`,
+  `pagingEnabled`, `scroll-snap-type: x`, `overflow-x: auto`) whose item width
+  equals the screen or container width (`Dimensions.get('window').width`,
+  `useWindowDimensions`, Unistyles `rt.screen.width`, a width measured in
+  `onLayout`, `width: '100%'`, `w-full`), or divides it evenly, such as
+  `(width - gap) / 2`. Full-page pagers, calendar or week strips, and
+  galleries with page dots or arrows are exempt, because a peek would break
+  them.
+- On screen: the last visible card in a horizontal row of cards ends exactly
+  at the screen edge.
+
 **Notes:** ig-Del7XTgsuwI (0:02) compares 0% and 32% of the next card
 visible. The 32% comes from the video's mockup and is not a measured optimum.

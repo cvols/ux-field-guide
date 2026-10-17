@@ -20,6 +20,24 @@ feature does not need.
 a visible reason is more likely to be allowed, and a refused one is hard to
 recover from.
 
+**Spot it:**
+
+- In code: permission requests called at app start, from a root layout,
+  `App.tsx`, or a `useEffect` on the first screen, instead of in the handler
+  of the feature that needs them. Covers `request*PermissionsAsync`
+  (notifications, location, camera, contacts, media),
+  `getExpoPushTokenAsync` and `registerForPushNotificationsAsync` helpers,
+  which ask without saying so, `requestTrackingPermissionsAsync` (App
+  Tracking Transparency), SDKs that ask on init (Firebase Messaging
+  `requestPermission`, OneSignal), and on the web
+  `Notification.requestPermission`, `getUserMedia`, and
+  `navigator.geolocation`. Config is a lead, not a break: expo-notifications
+  or expo-location plugins and `NS*UsageDescription` keys in `infoPlist`
+  show what will be asked. Also look for no fallback when permission is
+  denied.
+- On screen: a system permission alert appears on first launch, before the
+  person has done anything.
+
 **Notes:** Apple's App Review Guideline 5.1.1(iv) bars apps from
 manipulating, tricking, or forcing people to consent to unnecessary data
 access, and asks for alternatives when people decline
