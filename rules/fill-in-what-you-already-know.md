@@ -19,4 +19,6 @@ takes less input gets finished faster and more often.
 
 **Notes:** ig-Del7XTgsuwI (0:49) cuts a full address from 30 keystrokes to 7
 with postcode lookup. The video frames this as Parkinson's law, that a task
-swells to fill the time it is given, but the rule holds on effort alone.
+swells to fill the time it is given, but the rule holds on effort alone. See also
+[preselect-the-most-likely-choice](preselect-the-most-likely-choice.md),
+which covers best guesses rather than known data.
